@@ -1,4 +1,4 @@
-# Colored
+# [WIP]Colored
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/ramon/colored.svg)](https://packagist.org/packages/ramon/colored)
 
