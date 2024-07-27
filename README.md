@@ -9,13 +9,13 @@ A [Flarum](http://flarum.org) extension. Uma extensão para colorir elementos co
 Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
 
 ```sh
-composer require ramon/colored
+composer require ram0ng1/colored
 ```
 
 ### Updating
 
 ```sh
-composer update ramon/colored
+composer update ram0ng1/colored
 ```
 
 ### Links
