@@ -27,9 +27,9 @@
     "flarum-extension": {
       "title": "Colored",
       "icon": {
-        "name": "",
-        "backgroundColor": "",
-        "color": ""
+        "name": "fa-solid fa-palette",
+        "backgroundColor": "#fff",
+        "color": "#b21e4b"
       }
     },
     "flagrow": {
