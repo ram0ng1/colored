@@ -6,6 +6,7 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
+  "version": "0.1.0-beta",
   "require": {
     "flarum/core": "^1.0"
   },
@@ -13,7 +14,8 @@
     {
       "name": "Ramon Guilherme",
       "email": "ramon@ramonguilherme.com.br",
-      "role": "Developer"
+      "role": "Developer",
+      "homepage": "https://www.ramonguilherme.com.br"
     }
   ],
   "autoload": {
