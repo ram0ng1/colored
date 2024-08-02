@@ -27,7 +27,7 @@
     "flarum-extension": {
       "title": "Colored",
       "icon": {
-        "name": "fa-solid fa-palette",
+        "name": "icon.png",
         "backgroundColor": "#fff",
         "color": "#b21e4b"
       }
