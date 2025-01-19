@@ -1,21 +1,36 @@
 {
   "name": "ramon/colored",
-  "description": "Uma extensão para colorir elementos com base nas cores das tags.",
+  "description": "An extension to color elements based on the primary tag color of the discussion.",
   "keywords": [
-    "flarum"
+    "flarum",
+    "extension",
+    "tags",
+    "color",
+    "discussion",
+    "styling"
   ],
   "type": "flarum-extension",
   "license": "MIT",
-  "version": "0.1.0.0",
   "require": {
-   "flarum/core": "^1.7.1"
+    "flarum/core": "^1.7.0"
   },
   "authors": [
     {
       "name": "Ramon Guilherme",
       "email": "ramon@ramonguilherme.com.br",
-      "role": "Developer",
-      "homepage": "https://www.ramonguilherme.com.br"
+      "homepage": "https://ramonguilherme.com.br",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ram0ng1/colored/issues",
+    "source": "https://github.com/ram0ng1/colored",
+    "forum": "https://github.com/ram0ng1/colored"
+  },
+  "funding": [
+    {
+      "type": "website",
+      "url": "https://donate.stripe.com/fZe5o66nebkf39S28a"
     }
   ],
   "autoload": {
@@ -27,13 +42,10 @@
     "flarum-extension": {
       "title": "Colored",
       "icon": {
-        "name": "fas fa-palette",
-        "backgroundColor": "#fff",
-        "color": "#b21e4b"
+        "name": "fas fa-pencil-alt",
+        "backgroundColor": "#ffffff",
+        "color": "#f4645f"
       }
-    },
-    "flagrow": {
-      "discuss": ""
     }
   }
 }
