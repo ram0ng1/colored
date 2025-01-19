@@ -82,7 +82,13 @@ function clearStyles(defaultColor = null) {
 }
 
 function clearAllColors() {
-  const defaultColor = app.forum.attribute('theme_primary_color') || '#536f90';
+  const defaultColor = app.forum.attribute('theme_primary_color') 
+    || app.forum.attribute('themePrimaryColor') 
+    || app.forum.attribute('primary_color')
+    || document.documentElement.style.getPropertyValue('--primary-color')
+    || window.getComputedStyle(document.documentElement).getPropertyValue('--primary-color')
+    || '#FFFFFF';
+  
   document.documentElement.style.setProperty('--primary-color', defaultColor);
   document.documentElement.style.setProperty('--link-color', defaultColor);
   clearStyles(defaultColor);
