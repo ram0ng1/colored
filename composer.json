@@ -41,6 +41,7 @@
   "extra": {
     "flarum-extension": {
       "title": "Colored",
+      "category": "theme",
       "icon": {
         "name": "fas fa-pencil-alt",
         "backgroundColor": "#ffffff",
