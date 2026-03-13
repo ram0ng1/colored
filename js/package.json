@@ -1,14 +1,17 @@
 {
-  "name": "@ramon/colored",
-  "version": "1.1.0",
-  "private": true,
-  "dependencies": {
-    "flarum-webpack-config": "^0.1.0-beta.10",
-    "webpack": "^4.26.0",
-    "webpack-cli": "^3.0.7"
-  },
-  "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
-  }
+    "private": true,
+    "name": "@ramon/colored",
+    "version": "1.3.0",
+    "scripts": {
+        "dev": "webpack --mode development --watch",
+        "build": "webpack --mode production",
+        "check-typings": "tsc --noEmit --emitDeclarationOnly false"
+    },
+    "devDependencies": {
+        "flarum-tsconfig": "^2.0.0",
+        "flarum-webpack-config": "^3.0.0",
+        "typescript": "^4.5.4",
+        "webpack": "^5.98.0",
+        "webpack-cli": "^4.9.1"
+    }
 }
