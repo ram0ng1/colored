@@ -1,0 +1,62 @@
+// ramon/colored — colorize primary Flarum elements based on the active tag color
+//
+// JS sets two inline CSS vars on <body>:
+//   --colored-color    → the tag's hex/rgb color
+//   --colored-contrast → 'var(--text-on-dark)' or 'var(--text-on-light)' (resolved at render time)
+
+// Suppress all CSS transitions/animations while switching tag colors (2 frames).
+// Prevents accent-color, header-bg, and other color vars from visibly animating.
+html.colored--instant,
+html.colored--instant * {
+  transition-duration: 0s !important;
+  animation-duration: 0s !important;
+}
+
+body.colored--active {
+  // Primary brand color: form focus rings, tabs, sidenav active, composer outline,
+  // unread indicator, notification bubble, post scrubber
+  --primary-color: var(--colored-color);
+
+  // Links
+  --link-color: var(--colored-color);
+
+  // Primary buttons (Reply, Post Discussion, Sign In, Submit…)
+  --button-primary-bg:          var(--colored-color);
+  --button-primary-bg-hover:    color-mix(in srgb, var(--colored-color) 88%, black);
+  --button-primary-bg-active:   color-mix(in srgb, var(--colored-color) 78%, black);
+  --button-primary-bg-disabled: var(--colored-color);
+  --button-primary-color:       var(--colored-contrast);
+}
+
+// ─── Discussion list card borders ─────────────────────────────────────────────
+// --item-tag-color is injected inline per-card by DiscussionListItem vdom patch.
+// Falls back to transparent so the layout never shifts when no color is set.
+
+html[data-colored-border=left] .DiscussionListItem {
+  border-left: 3px solid var(--item-tag-color, transparent);
+}
+
+html[data-colored-border=full] .DiscussionListItem {
+  border: 2px solid var(--item-tag-color, transparent);
+  border-radius: var(--border-radius);
+}
+
+// ─── Header ──────────────────────────────────────────────────────────────────
+// Only when "Colored Header" is enabled in Flarum admin settings.
+// Overrides --header-* and all --header-colored-* vars consumed by
+// .light-contents(@name: 'header-colored') inside .App-header.
+
+html[data-colored-header=true] body.colored--active {
+  // Standard header vars
+  --header-bg:            var(--colored-color);
+  --header-color:         var(--colored-contrast);
+  --header-control-bg:    rgba(0, 0, 0, 0.15);
+  --header-control-color: var(--colored-contrast);
+
+  // light-contents('header-colored') vars — consumed by .App-header
+  --header-colored-color:              var(--colored-contrast);
+  --header-colored-control-bg:         rgba(0, 0, 0, 0.15);
+  --header-colored-control-color:      var(--colored-contrast);
+  --header-colored-control-bg-shaded:  rgba(0, 0, 0, 0.25);
+  --header-colored-control-bg-fadedin: rgba(0, 0, 0, 0.20);
+}

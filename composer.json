@@ -1,0 +1,53 @@
+{
+    "name": "ramon/colored",
+    "description": "Colorizes the Flarum forum header and interface based on the active tag's color.",
+      "keywords": [
+    "flarum",
+    "extension",
+    "tags",
+    "color",
+    "discussion",
+    "styling"
+  ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^2.0.0",
+        "flarum/tags": "^2.0.0-beta"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.x-dev"
+        },
+        "flarum-extension": {
+            "title": "Colored",
+            "category": "theme",
+            "icon": {
+                "name": "fas fa-pencil",
+                "backgroundColor": "#7C3AED",
+                "color": "#fff"
+            }
+        }
+    },
+    "authors": [
+    {
+      "name": "Ramon Guilherme",
+      "email": "ramon@ramonguilherme.com.br",
+      "homepage": "https://ramonguilherme.com.br",
+      "role": "Developer"
+    }
+  ],
+    "support": {
+    "issues": "https://github.com/ram0ng1/colored/issues",
+    "source": "https://github.com/ram0ng1/colored",
+    "forum": "https://discuss.flarum.org/d/35041-colored-an-extension-to-color-elements-based-on-tag-colors/37"
+  },
+    "funding": [
+    {
+      "type": "website",
+      "url": "https://donate.stripe.com/fZe5o66nebkf39S28a"
+    }
+  ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
