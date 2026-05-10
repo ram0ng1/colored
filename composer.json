@@ -12,18 +12,18 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^2.0.0",
-        "flarum/tags": "^2.0.0-beta"
+        "flarum/core": "^1.8.0",
+        "flarum/tags": "*"
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "2.x-dev"
+            "dev-1.8.x": "1.x-dev"
         },
         "flarum-extension": {
             "title": "Colored",
             "category": "theme",
             "icon": {
-                "name": "fas fa-pencil",
+                "name": "fas fa-palette",
                 "backgroundColor": "#7C3AED",
                 "color": "#fff"
             }

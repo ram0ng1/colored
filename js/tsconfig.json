@@ -10,7 +10,7 @@
         "baseUrl": ".",
         "paths": {
             "flarum/*": ["../../../vendor/flarum/core/js/dist-typings/*"],
-            "ext:flarum/tags/*": ["../../../vendor/flarum/tags/js/dist-typings/*"]
+            "flarum/tags/utils/sortTags": ["../../../vendor/flarum/tags/js/dist-typings/common/utils/sortTags"]
         }
     }
 }

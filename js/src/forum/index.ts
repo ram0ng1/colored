@@ -1,8 +1,9 @@
 import { extend } from 'flarum/common/extend';
 import app from 'flarum/common/app';
+import Application from 'flarum/common/Application';
 import DiscussionHero from 'flarum/forum/components/DiscussionHero';
 import DiscussionListItem from 'flarum/forum/components/DiscussionListItem';
-import sortTags from 'ext:flarum/tags/common/utils/sortTags';
+import sortTags from 'flarum/tags/utils/sortTags';
 import isDark from 'flarum/common/utils/isDark';
 
 // Disable CSS transitions for 2 frames so color vars snap instantly.
@@ -38,10 +39,9 @@ function clearColor(): void {
 }
 
 app.initializers.add('ramon-colored', () => {
-  // NOTE: app.forum is NOT yet set during initialize() — it's set after in boot().
-  // Use app.beforeMount() for one-time setup that needs app.forum.
-
-  app.beforeMount(() => {
+  // In Flarum 1.x, app.forum is populated AFTER initializers run (in boot(), right
+  // before mount()). So defer attribute reads until mount() via an extend hook.
+  extend(Application.prototype, 'mount', function () {
     const borderStyle = app.forum.attribute<string>('colored.borderStyle') || 'none';
     document.documentElement.setAttribute('data-colored-border', borderStyle);
   });

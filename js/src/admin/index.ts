@@ -1,7 +1,7 @@
 import app from 'flarum/admin/app';
 
 app.initializers.add('ramon-colored', () => {
-  app.registry
+  app.extensionData
     .for('ramon-colored')
     .registerSetting({
       setting: 'colored.border_style',
